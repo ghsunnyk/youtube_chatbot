@@ -21,17 +21,6 @@ youtube_chatbot_project/
 └── .gitignore
 ```
 
-## What changed from the two-script version
-
-Previously you had to:
-1. Run `create_memory_for_llm.py` to build the vector store.
-2. Run `connect_memory_with_llm.py` to chat with it.
-
-Now `main.py` does both automatically: `YoutubeChatbot` calls
-`get_or_create_vectorstore()`, which builds the FAISS index if it doesn't
-already exist for that video ID, then loads it either way and starts the
-chat loop.
-
 ## Setup
 
 ```bash
